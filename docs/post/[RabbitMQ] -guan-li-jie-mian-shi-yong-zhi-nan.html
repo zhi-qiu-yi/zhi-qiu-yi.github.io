@@ -73,7 +73,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><p>整了一些场景使用误区。</p>
 <h1>Message rates 不断变化，Queued messages 始终显示为 0</h1>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/zhi-qiu-yi/zhi-qiu-yi.github.io/assets/32633065/8b55217b-b5b8-4981-ba2d-420bd2cfcfbe"><img width="928" alt="image" src="https://github.com/zhi-qiu-yi/zhi-qiu-yi.github.io/assets/32633065/8b55217b-b5b8-4981-ba2d-420bd2cfcfbe" style="max-width: 100%;"></a></p>
-Queued messages 显示的是**队列堆积的消息**，只有消费速率跟不上生产速率时，才会有堆积消息。</div>
+Queued messages 显示的是**队列堆积的消息**，只有消费速率跟不上生产速率时，才会有堆积消息。
+右边的三个 tab 是堆积消息的三种状态：
+<ul>
+<li>Ready: 在队列中，可以被消费者消费</li>
+<li>Unacked: 消费者消费了该消息，但是没有返回 ack 响应</li>
+<li>Total: 前两者之合</li>
+</ul></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
